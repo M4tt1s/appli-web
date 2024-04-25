@@ -36,7 +36,7 @@ IRC entre tous les utilisateurs (leur permet de demander de l'aide ou discuter d
 
 ### Enchainement des pages
 
-
+![Enchainement des pages](/enchainementpages.png)
 
 ### Schema de donnees
 
