@@ -42,6 +42,8 @@ IRC entre tous les utilisateurs (leur permet de demander de l'aide ou discuter d
 
 Entités : utilisateur, challenge, resultat, classement (place dans le tableau des scores), message (pour le IRC), documentation (comme un petit cours sur une notion/technologie), code premium
 
+![Schéma de données](/schema_donnees.png)
+
 ## Configuration de l'environnement
 
 Eclipse, JEE, MariaDB, Makefile pour utiliser juste code
