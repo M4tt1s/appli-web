@@ -10,7 +10,33 @@ Les administrateurs créer des activités (premium au choix) et précise le nive
 
 ## Theme et Specifications du site
 
+### Theme
 
+Site de Challenge avec connection et score.
+
+### Fonctionnalites
+
+Créer un compte ou se connecter, un compte = un pseudo, un e-mail, un mot-de-passe. La connection se fait avec le pseudo uniquement (pas l'adresse mail).
+
+Créer une activité pour un administrateur (un seul compte "en dur" qui lorsqu'on s'y connecte permet de supprimer/ajouter des activités) et ajouter des tags.
+
+Limiter les utilisateurs standard.
+
+Sourscrire à un plan prémium en entrant un code prémium.
+
+Accéder aux activités, trier les activités selon leurs tags.
+
+Persistence des données (comptes, activités, etc...).
+
+Tableau des scores (classements des utilisateurs).
+
+Activités = ensemble de blocs de textes (questions, instructions, etc...) et d'inputs (déposer un fichier, taper un résultat/un mdp) éventuellement bloquants (enchainement dans l'ordre).
+
+### Enchainement des pages
+
+
+
+### Schema de donnees
 
 ## Configuration de l'environnement
 
