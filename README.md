@@ -32,12 +32,17 @@ Tableau des scores (classements des utilisateurs).
 
 Activités = ensemble de blocs de textes (questions, instructions, etc...) et d'inputs (déposer un fichier, taper un résultat/un mdp) éventuellement bloquants (enchainement dans l'ordre).
 
+IRC entre tous les utilisateurs (leur permet de demander de l'aide ou discuter du site). en 
+
 ### Enchainement des pages
 
 
 
 ### Schema de donnees
 
+Entités : utilisateur, challenge, resultat, classement (place dans le tableau des scores), message (pour le IRC), documentation (comme un petit cours sur une notion/technologie), code premium
+
 ## Configuration de l'environnement
 
-
+Eclipse, JEE, MariaDB, Makefile pour utiliser juste code
+Angular
