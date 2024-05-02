@@ -38,3 +38,25 @@ header {
 #loginForm button:hover {
     background-color: #555;
 }
+
+#registerForm {
+    margin-bottom: 20px;
+}
+#registerForm input[type="text"],
+#registerForm input[type="email"],
+#registerForm input[type="password"],
+#registerForm button {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#registerForm button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#registerForm button:hover {
+    background-color: #555;
+}
