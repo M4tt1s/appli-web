@@ -11,6 +11,9 @@ public class Premium {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
+	@OneToOne
+	private Utilisateur utilisateur;
 	
 	private String code;
 	
