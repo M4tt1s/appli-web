@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge - Titre du Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Titre du Challenge</h1>
+    </header>
+    <div class="container">
+        <h2>Description du Challenge</h2>
+        <p>
+            Voici la description du challenge. Ce que les participants doivent faire, les objectifs, etc.
+        </p>
+        
+        <h2>Fichier à uploader</h2>
+        <p>
+            Si nécessaire, téléchargez le fichier ici : <a href="fichier_challenge.zip">Fichier_challenge.zip</a>
+        </p>
+        
+        <h2>Aides</h2>
+        <ul>
+            <li><a href="aide1.html">Aide 1</a></li>
+            <li><a href="aide2.html">Aide 2</a></li>
+        </ul>
+
+        <h2>Validation de la réponse</h2>
+        <p>
+            Entrez le flag ici :
+            <input type="text" id="userAnswer" placeholder="Entrez le flag ici">
+            <button onclick="checkAnswer()">Valider</button>
+        </p>
+        <p id="result"></p>
+    </div>
+    
+    <--! script à changer (placer sur le serveur la verification du flag, sinon il suffit de voir le code source de la page pour avoir le flag) ->
+    <script>
+        function checkAnswer() {
+            var userAnswer = document.getElementById("userAnswer").value.trim();
+            var correctAnswer = "LeFlagCorrect";
+
+            if (userAnswer === correctAnswer) {
+                document.getElementById("result").innerText = "Félicitations ! Vous avez réussi le challenge.";
+            } else {
+                document.getElementById("result").innerText = "Désolé, ce n'est pas la bonne réponse. Veuillez réessayer.";
+            }
+        }
+    </script>
+</body>
+</html>
