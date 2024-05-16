@@ -73,4 +73,4 @@ Angular
 - Utilisateur/Resultat OneToMany, porteur = Resultat.
 - Challenge/Resultat OneToMany, porteur = Resultat.
 - Utilisateur/Classement OneToOne, porteur = Classement.
-- 
+- Utilisateur/Message OneToMany, porteur = Message.
