@@ -48,3 +48,10 @@ Entités : utilisateur, challenge, resultat, classement (place dans le tableau d
 
 Eclipse, JEE, MariaDB, Makefile pour utiliser juste code
 Angular
+
+## Séance 3
+
+### Relations
+
+- Utilisateur/Premium OneToOne, porteur = Utilisateur
+- Utilisateur/Resultat OneToMany, porteur = Resultat

@@ -12,7 +12,7 @@ public class Premium {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@OneToOne
+	@OneToOne(mappedBy="premium")
 	private Utilisateur utilisateur;
 	
 	private String code;

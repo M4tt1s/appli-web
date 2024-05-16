@@ -1,4 +1,6 @@
 package pack;
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +20,9 @@ public class Utilisateur {
 	
 	@OneToOne
 	private Premium premium;
+
+	@OneToMany(mappedBy="utilisateur")
+	private Collection<Resultat> resultats;
 	
 	public Utilisateur() {}
 	
@@ -42,6 +47,10 @@ public class Utilisateur {
 	public void SetPremium(Premium p) {
 		this.premium = p;
 	}
+
+	public void SetResultat(Collection<Resultat> res) {
+		this.resultats = res;
+	}
 	
 	public String getPseudo() {
 		return this.pseudo;
@@ -57,5 +66,9 @@ public class Utilisateur {
 	
 	public Premium getPremium() {
 		return this.premium;
+	}
+
+	public Collection<Resultat> getResultats() {
+		return this.resultats;
 	}
 }

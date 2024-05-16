@@ -12,7 +12,7 @@ public class Resultat {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@OneToOne
+	@ManyToOne
 	private Utilisateur utilisateur;
 	
 	@OneToOne
