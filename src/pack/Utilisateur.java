@@ -23,6 +23,12 @@ public class Utilisateur {
 
 	@OneToMany(mappedBy="utilisateur")
 	private Collection<Resultat> resultats;
+
+	@OneToOne(mappedBy="utilisateur")
+	private Classement classement;
+
+	@OneToMany(mappedBy="utilisateur")
+	private Collection<Message> messages;
 	
 	public Utilisateur() {}
 	
@@ -51,6 +57,14 @@ public class Utilisateur {
 	public void SetResultat(Collection<Resultat> res) {
 		this.resultats = res;
 	}
+
+	public void SetClassement(Classement c) {
+		this.classement = c;
+	}
+
+	public void SetMessages(Collection<Message> msgs) {
+		this.messages = msgs;
+	}
 	
 	public String getPseudo() {
 		return this.pseudo;
@@ -70,5 +84,13 @@ public class Utilisateur {
 
 	public Collection<Resultat> getResultats() {
 		return this.resultats;
+	}
+
+	public Classement getClassement() {
+		return this.classement;
+	}
+
+	public Collection<Message> getMessages() {
+		return this.messages;
 	}
 }

@@ -17,9 +17,8 @@ public class Message {
 	private String[] texte;
 	private Date date;
 	
-	@OneToOne
+	@ManyToOne
 	private Utilisateur utilisateur;
-	
 	
 	public Message() {}
 	

@@ -69,5 +69,8 @@ Angular
 
 ### Relations
 
-- Utilisateur/Premium OneToOne, porteur = Utilisateur
-- Utilisateur/Resultat OneToMany, porteur = Resultat
+- Utilisateur/Premium OneToOne, porteur = Utilisateur.
+- Utilisateur/Resultat OneToMany, porteur = Resultat.
+- Challenge/Resultat OneToMany, porteur = Resultat.
+- Utilisateur/Classement OneToOne, porteur = Classement.
+- 

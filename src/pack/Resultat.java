@@ -15,7 +15,7 @@ public class Resultat {
 	@ManyToOne
 	private Utilisateur utilisateur;
 	
-	@OneToOne
+	@ManyToOne
 	private Challenge challenge;
 	
 	private Boolean aReussi;
