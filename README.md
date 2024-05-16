@@ -49,6 +49,22 @@ Entités : utilisateur, challenge, resultat, classement (place dans le tableau d
 Eclipse, JEE, MariaDB, Makefile pour utiliser juste code
 Angular
 
+## Séance 2
+
+### Front-end partiel
+
+![Front-end Partiel](/front_end_partiel.png)
+
+### Définition des Entities (code métier)
+
+- Challenge.java : relation OneToOne avec entity Premium, attributs (titre, text, points).
+- Classement.java : relation OneToOne avec entity Utilisateur, attribut (position).
+- Documentation.java : aucune relation, attributs (titre, text).
+- Message.java : relation OneToOne avec entity Utilisateur, attributs (textes, date).
+- Premium.java : relation OneToOne avec entity Utilisateur, attribut (code).
+- Resultat.java : relation OneToOne avec entity Utilisateur, relation OneToOne avec entity Challenge, attribut (aReussi).
+- Utilisateur.java : relation OneToOne avec entity Premium, attributs (pseudo, mail, passwordHash).
+
 ## Séance 3
 
 ### Relations
