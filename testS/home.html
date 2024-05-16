@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page des Challenges</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .challenge {
+            margin-bottom: 20px;
+        }
+        .completed {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <select class="menu" onchange="navigate()">
+                <option value="documentation">Documentation</option>
+                <option value="classement">Classement</option> <--! le style du déroulant est pas fou -->
+                <option value="compte">Compte</option>
+                <--! on peut ajouter d'autres pages ici -->
+            </select>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Liste des Challenges</h2>
+        <div>
+            <label for="difficulty">Filtrer par difficulté :</label>
+            <select id="difficulty">
+                <option value="facile">Facile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
+            </select>
+        </div>
+        <div>
+            <label for="type">Filtrer par type :</label>
+            <select id="type">
+                <option value="type1">Type 1</option>
+                <option value="type2">Type 2</option>
+                <option value="type3">Type 3</option>
+            </select>
+        </div>
+        <div id="challenges">
+            <!-- Liste des challenges -->
+            <div class="challenge">
+                <p class="completed"> Nom challenge 1 : Courte descr , difficulté... type... </p>
+            </div>
+            <div class="challenge">
+                <p> Nom challenge 2 : Courte descr , difficulté... type... </p>
+            </div>
+            <!-- la c'est pour l'exemple en vrai on affiche tous les challenges de la facade -->
+        </div>
+    </div>
+
+    <script>
+        // Code pour le filtrage des challenges par difficulté et par type, fait par la facade en vrai... pas à sa place
+        document.getElementById('difficulty').addEventListener('change', filterChallenges);
+        document.getElementById('type').addEventListener('change', filterChallenges);
+
+        function filterChallenges() {
+            var difficulty = document.getElementById('difficulty').value;
+            var type = document.getElementById('type').value;
+            var challenges = document.getElementsByClassName('challenge');
+
+            for (var i = 0; i < challenges.length; i++) {
+                var challenge = challenges[i];
+                var completed = challenge.getElementsByClassName('completed')[0];
+
+                if (challenge.classList.contains(difficulty) && challenge.classList.contains(type)) {
+                    challenge.style.display = 'block';
+                } else {
+                    challenge.style.display = 'none';
+                }
+            }
+        }
+
+        function navigate() {
+            var page = document.querySelector('.menu').value;
+            if (page === "documentation") {
+                window.location.href = "documentation.html";
+            } else if (page === "classement") {
+                window.location.href = "classement.html";
+            } else if (page === "compte") {
+                window.location.href = "compte.html";
+            }
+        }
+
+    </script>
+</body>
+</html>

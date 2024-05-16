@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        .menu {
+            margin-left: 20px;
+        }
+        .user-info {
+            padding: 20px;
+        }
+        .user-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .user-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <button onclick="goHome()">&#127968;</button> <--! emoji maison -->
+        <select class="menu" onchange="navigate()">
+            <option value="documentation">Documentation</option>
+            <option value="classement">Classement</option> <--! le style du déroulant est pas fou -->
+            <--! on peut ajouter d'autres pages ici -->
+        </select>
+    </header>
+    <div class="user-info">
+        <img src="avatar.jpg" alt="Photo de Profil">
+        <p><strong>Nom:</strong> Jane</p> // la on met un get name, etc...
+        <p><strong>Prénom:</strong> Doe</p>
+        <p><strong>Pseudo:</strong> janedoe</p>
+        <p><strong>Score:</strong> 1000</p>
+        <p><strong>Badges:</strong> 5</p>
+        <p><strong>Statut:</strong> Actif</p>
+        <p><strong>Premium:</strong> Oui</p>
+        // c'est pour l'exemple, en vrai c'est les attributs de l'utilisateur connecté
+    </div>
+
+    <button onclick="logout()">Se déconnecter</button> // se déconnecter -> retour à index.html
+    <button onclick="deleteAccount()">Supprimer le Compte</button> // supprimer l'utilisateur dans la facade
+    <button onclick="editProfile()">Modifier le Profil</button> // ce serait stylé mais jsp comment l'implémenter
+    <button onclick="changePassword()">Changer le Mot de Passe</button> // affiche un champ de texte, a modif en facade selon l'input...
+    <button onclick="upgrade()">Passer en Premium</button> // vers la page html de subscription
+
+    <script>
+        function goHome() {
+            window.location.href = "home.html";
+        }
+
+        function navigate() {
+            var page = document.querySelector('.menu').value;
+            if (page === "documentation") {
+                window.location.href = "documentation.html";
+            } else if (page === "classement") {
+                window.location.href = "classement.html";
+            }
+        }
+
+        function logout() {
+            window.location.href = "index.html";
+        }
+        function changePassword() { //JE COMPRENDS PAS PK MAIS CA FONCTIONNE PAAAAAS
+            var container = document.querySelector('.container');
+
+            // Créer le formulaire
+            var form = document.createElement('form');
+            form.id = 'changePasswordForm';
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                submitForm();
+            });
+            form.action = '/changePassword';
+
+            // Créer le champ de texte pour l'ancien mot de passe
+            var oldPasswordInput = document.createElement('input');
+            oldPasswordInput.type = 'password';
+            oldPasswordInput.name = 'oldPassword';
+            oldPasswordInput.placeholder = 'Ancien mot de passe';
+            form.appendChild(oldPasswordInput);
+
+            // Créer le champ de texte pour le nouveau mot de passe
+            var newPasswordInput = document.createElement('input');
+            newPasswordInput.type = 'password';
+            newPasswordInput.name = 'newPassword';
+            newPasswordInput.placeholder = 'Nouveau mot de passe';
+            form.appendChild(newPasswordInput);
+
+            // Créer le champ de texte pour la confirmation du nouveau mot de passe
+            var confirmPasswordInput = document.createElement('input');
+            confirmPasswordInput.type = 'password';
+            confirmPasswordInput.name = 'confirmPassword';
+            confirmPasswordInput.placeholder = 'Confirmer le nouveau mot de passe';
+            form.appendChild(confirmPasswordInput);
+
+            // Créer le bouton de soumission du formulaire
+            var submitButton = document.createElement('button');
+            submitButton.type = 'submit';
+            submitButton.textContent = 'Changer le mot de passe';
+            form.appendChild(submitButton);
+
+            // Ajouter le formulaire à la page
+            container.appendChild(form);
+        }
+
+        function submitForm() {
+            var form = document.getElementById('changePasswordForm');
+            var oldPassword = form.elements.oldPassword.value;
+            var newPassword = form.elements.newPassword.value;
+            var confirmPassword = form.elements.confirmPassword.value;
+
+            // Ajoutez ici la logique pour envoyer les données du formulaire au serveur
+        }
+
+        function upgrade() { //peut etre mettre un truc pour pas qu'il paye s'il est deja premium ??
+            window.location.href = "premium.html";
+        }
+
+    </script>
+</body>
+</html>
