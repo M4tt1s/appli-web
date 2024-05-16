@@ -49,7 +49,7 @@
             var yourRankList = document.getElementById("yourRank");
             var yourRankItem = document.createElement("li");
             yourRankItem.innerText = "Votre classement : " + (connectedPlayerRank + 1) + " - Score : " + connectedPlayer.score;
-            yourRankList.appendChild(yourRankItem);
+            yourRankList.appendChild(yourRankItem); //faudrait enlever le petit 1. qui apparait devant ton score ...
         } else {
             //on fait rien, il n'existe pas
         }
