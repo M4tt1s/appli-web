@@ -74,3 +74,7 @@ Angular
 - Challenge/Resultat OneToMany, porteur = Resultat.
 - Utilisateur/Classement OneToOne, porteur = Classement.
 - Utilisateur/Message OneToMany, porteur = Message.
+
+### Authentification par token
+
+On génère un token par utilisateur à la connection, le client le passe à chaque post pour pouvoir identifier l'utilisateur.
