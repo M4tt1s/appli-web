@@ -78,3 +78,7 @@ Angular
 ### Authentification par token
 
 On génère un token par utilisateur à la connection, le client le passe à chaque post pour pouvoir identifier l'utilisateur.
+
+### Implémentation du Front-end
+
+![Front-end Séance 3](/front_end_seance3.png)
