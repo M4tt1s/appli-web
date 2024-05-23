@@ -82,3 +82,35 @@ On génère un token par utilisateur à la connection, le client le passe à cha
 ### Implémentation du Front-end
 
 ![Front-end Séance 3](/front_end_seance3.png)
+
+
+## Séance 4 :
+
+### Finalisation de l'environnement :
+
+    - reprise en main des outils : eclipse, JBoss, etc...
+
+    - Makefile : copier les fichiers, lancer le serveur, etc...
+
+
+### Lien entre le front-end et le back-end ( 52 LOC):
+
+    - ajout des éléments pour la persistence
+
+
+### Ajout des fonctionnalités (à finir) :
+
+    - activation d'un code premium
+
+    - envoi et reception des messages IRC
+
+    - création et connexion à un compte
+
+    - gestion du compte administrateur
+
+
+### Amélioration de l'ergonomie des pages web ( 152 LOC):
+
+    - polissage du style
+
+    - menu déroulant
