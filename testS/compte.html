@@ -8,11 +8,7 @@
     <style>
         .header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding: 10px;
-            background-color: #333;
-            color: #fff;
         }
         .menu {
             margin-left: 20px;
@@ -33,13 +29,23 @@
 </head>
 <body>
     <header class="header">
-        <button onclick="goHome()">&#127968;</button> <--! emoji maison -->
-        <select class="menu" onchange="navigate()">
-            <option value="documentation">Documentation</option>
-            <option value="classement">Classement</option> <--! le style du déroulant est pas fou -->
-            <--! on peut ajouter d'autres pages ici -->
-        </select>
+        <button onclick="goHome()">&#127968;</button>
     </header>
+
+    <nav>
+        <li class="deroulant"><a href="#">MENU &ensp;</a>
+        <ul class="sous-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="classement.html">Classement</a></li>
+            <li><a href="compte.html">Mon Compte</a></li>
+        </ul>
+        </li>
+    </nav>
+
+    
+    <div class="container">
+        <h2>Mon Compte</h2>
     <div class="user-info">
         <img src="avatar.jpg" alt="Photo de Profil">
         <p><strong>Nom:</strong> Jane</p> // la on met un get name, etc...
@@ -51,25 +57,17 @@
         <p><strong>Premium:</strong> Oui</p>
         // c'est pour l'exemple, en vrai c'est les attributs de l'utilisateur connecté
     </div>
+    </div>
 
-    <button onclick="logout()">Se déconnecter</button> // se déconnecter -> retour à index.html
-    <button onclick="deleteAccount()">Supprimer le Compte</button> // supprimer l'utilisateur dans la facade
-    <button onclick="editProfile()">Modifier le Profil</button> // ce serait stylé mais jsp comment l'implémenter
-    <button onclick="changePassword()">Changer le Mot de Passe</button> // affiche un champ de texte, a modif en facade selon l'input...
-    <button onclick="upgrade()">Passer en Premium</button> // vers la page html de subscription
+    <button onclick="logout()">Se déconnecter</button> // se déconnecter -> retour à index.html <br>
+    <button onclick="deleteAccount()">Supprimer le Compte</button> // supprimer l'utilisateur dans la facade <br>
+    <button onclick="editProfile()">Modifier le Profil</button> // ce serait stylé mais jsp comment l'implémenter <br>
+    <button onclick="changePassword()">Changer le Mot de Passe</button> // affiche un champ de texte, a modif en facade selon l'input... <br>
+    <button onclick="upgrade()">Passer en Premium</button> // vers la page html de subscription <br>
 
     <script>
         function goHome() {
             window.location.href = "home.html";
-        }
-
-        function navigate() {
-            var page = document.querySelector('.menu').value;
-            if (page === "documentation") {
-                window.location.href = "documentation.html";
-            } else if (page === "classement") {
-                window.location.href = "classement.html";
-            }
         }
 
         function logout() {
