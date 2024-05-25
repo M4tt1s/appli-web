@@ -24,11 +24,11 @@
 </head>
 <body>
     <nav>
-        <li class="deroulant"><a href="#">Cours Complets &ensp;</a>
+        <li class="deroulant"><a href="#">HOME &ensp;</a>
         <ul class="sous-menu">
-            <li><a href="#">Cours HTML et CSS</a></li>
-            <li><a href="#">Cours JavaScript</a></li>
-            <li><a href="#">Cours PHP et MySQL</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="classement.html">Classement</a></li>
+            <li><a href="compte.html">Mon Compte</a></li>
         </ul>
         </li>
     </nav>
@@ -82,17 +82,6 @@
                 } else {
                     challenge.style.display = 'none';
                 }
-            }
-        }
-
-        function navigate() {
-            var page = document.querySelector('.menu').value;
-            if (page === "documentation") {
-                window.location.href = "documentation.html";
-            } else if (page === "classement") {
-                window.location.href = "classement.html";
-            } else if (page === "compte") {
-                window.location.href = "compte.html";
             }
         }
 
