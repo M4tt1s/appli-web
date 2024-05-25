@@ -64,7 +64,7 @@ header {
 
 /* menu déroulant */
 nav{
-    width: 100%;
+    width: 25%;
     margin: 0 auto;
     background-color: white;
     position: sticky;
@@ -101,7 +101,7 @@ nav a:hover{
     border-bottom: 2px solid gold;
 }
 
-.deroulant:hover .sousMenu{display:block}
+.deroulant:hover .sous-menu{display:block}
 
 .sous-menu{
     display: none;
@@ -109,7 +109,7 @@ nav a:hover{
     background-color: white;
     position: absolute;
     width: 100%;
-    z-index: 1000;
+    z-index: 0;
 }
 nav > ul > li:hover .sous-menu{
     display: block;
